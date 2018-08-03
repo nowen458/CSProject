@@ -48,7 +48,7 @@ namespace CSProject
         public override string ToString() {
            return "\nName of Staff: " + NameOfStaff
                 + "\nHourly Rate: " + hourlyRate
-                + "\nHours Worked: " + hWorked
+                + "\nHours Worked: " + HoursWorked
                 + "\nBasic Pay: " + BasicPay
                 + "\nTotal Pay: " + TotalPay;
         }
