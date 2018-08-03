@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{EED378BB-78C6-495B-88A1-10E89EDB6EA1}|Default">
+  <MonoDevelop.Ide.ItemProperties.CSProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSProject/Manager.cs">
+    <Files>
+      <File FileName="CSProject/Program.cs" Line="1" Column="1" />
+      <File FileName="CSProject/Staff.cs" Line="47" Column="37" />
+      <File FileName="CSProject/Manager.cs" Line="2" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

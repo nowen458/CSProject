@@ -1,0 +1,4 @@
+/Users/nateowen/Projects/CSProject/CSProject/obj/Debug/netcoreapp2.1/CSProject.csprojResolveAssemblyReference.cache
+/Users/nateowen/Projects/CSProject/CSProject/obj/Debug/netcoreapp2.1/CSProject.csproj.CoreCompileInputs.cache
+/Users/nateowen/Projects/CSProject/CSProject/obj/Debug/netcoreapp2.1/CSProject.AssemblyInfoInputs.cache
+/Users/nateowen/Projects/CSProject/CSProject/obj/Debug/netcoreapp2.1/CSProject.AssemblyInfo.cs
