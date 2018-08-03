@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{EED378BB-78C6-495B-88A1-10E89EDB6EA1}|Default">
   <MonoDevelop.Ide.ItemProperties.CSProject PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSProject/Manager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSProject/FileReader.cs">
     <Files>
       <File FileName="CSProject/Program.cs" Line="1" Column="1" />
-      <File FileName="CSProject/Staff.cs" Line="47" Column="37" />
-      <File FileName="CSProject/Manager.cs" Line="2" Column="6" />
+      <File FileName="CSProject/Staff.cs" Line="51" Column="51" />
+      <File FileName="CSProject/Manager.cs" Line="35" Column="18" />
+      <File FileName="CSProject/Admin.cs" Line="7" Column="44" />
+      <File FileName="CSProject/FileReader.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

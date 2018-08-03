@@ -32,7 +32,7 @@ namespace CSProject
         {
             return "\nName of Staff: " + NameOfStaff
                  + "\nHourly Rate: " + managerHourlyRate
-                + "\nHours Worked: " + HoursWorked
+                 + "\nHours Worked: " + HoursWorked
                  + "\nBasic Pay: " + BasicPay
                  + "\nTotal Pay: " + TotalPay;
         }
