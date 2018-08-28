@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace CSProject
@@ -33,5 +35,86 @@ namespace CSProject
             month = payMonth;
             year = payYear;
         }
-    }
+
+        public void GeneratePaySlip(List<Staff> myStaff)
+        {
+            string path;
+
+            foreach (Staff f in myStaff)
+            {
+                path = f.NameOfStaff + ".txt";
+
+                StreamWriter sw = new StreamWriter(path);
+
+                // payslip description
+                sw.WriteLine("PAYSLIP FOR {0} {1}", (MonthsOfYear)month, year);
+                sw.WriteLine("====================");
+
+                // name and hours worked
+                sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
+                sw.WriteLine("Hours Worked: {0}", f.HoursWorked);
+
+                // blank line
+                sw.WriteLine("");
+
+                // basic pay and allowance
+                sw.WriteLine("Basic Pay: {0C}", f.BasicPay);
+                // if type of Staff object is Manager
+                if (f.GetType() == typeof(Manager))
+                {
+                    sw.WriteLine("Allowance Pay: {0C}", ((Manager)f).Allowance);
+                }
+                // if type of Staff object is Admin
+                else if (f.GetType() == typeof(Admin))
+                {
+                    sw.WriteLine("Overtime Pay: {0C", ((Admin)f).Overtime);
+                }
+
+                // blank line
+                sw.WriteLine("");
+                sw.WriteLine("====================");
+
+                // total pay
+                sw.WriteLine("Total Pay: {0C}", f.TotalPay);
+                sw.WriteLine("====================");
+
+
+                sw.Close(); // close StreamWriter
+
+            } // end foreach
+        } // end GeneratePaySlip
+
+        public void GenerateSummary(List<Staff> myStaff)
+        {
+            // LINQ query to determine employees with less than 10 hours
+            var result =
+                from f in myStaff
+                where f.HoursWorked < 10
+                orderby f.NameOfStaff
+                select new { f.NameOfStaff, f.HoursWorked };
+
+            string path = "summary.txt";
+
+            StreamWriter sw = new StreamWriter(path);
+
+            sw.WriteLine("Staff with less than 10 working hours:");
+            // blank line
+            sw.WriteLine("");
+
+            // print name of staff and hours worked
+            foreach (var r in result)
+            {
+                sw.WriteLine("Name of Staff: {0}, Hours Worked: {1}", r.NameOfStaff, r.HoursWorked);
+            }
+
+            sw.Close(); // close StreamWriter
+
+        } // end GenerateSummary
+
+        // returns values as strings
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    } 
 }

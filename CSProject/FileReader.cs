@@ -38,6 +38,7 @@ namespace CSProject
                             myStaff.Add(admin); // add to myStaff object
                         } // end else if
                     } // end while
+                    sr.Close(); // close StreamReader
                 } // end using
             } // end if
             // if file is not found, print error message
