@@ -12,6 +12,7 @@ namespace CSProject
             int month = 0;
             int year = 0;
 
+            // gets year from user
             while (year == 0)
             {
                 Console.WriteLine("\nPlease enter year: ");
@@ -28,6 +29,7 @@ namespace CSProject
                 } // end catch
             } // end year while
 
+            // gets month from user
             while (month == 0)
             {
                 Console.WriteLine("\nPlease enter month: ");
