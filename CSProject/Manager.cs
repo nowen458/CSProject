@@ -10,8 +10,9 @@ namespace CSProject
         // auto-implemented property
         public int Allowance { get; private set; }
 
-        public Manager(string name) : base(name, managerHourlyRate) {
-            
+        public Manager(string name) : base(name, managerHourlyRate)
+        {
+
         }
 
         // CalculatePay method
@@ -22,7 +23,8 @@ namespace CSProject
             // Allowance for manage
             Allowance = 1000;
 
-            if (HoursWorked > 160) {
+            if (HoursWorked > 160)
+            {
                 TotalPay = TotalPay + Allowance;
             }
         }
@@ -37,3 +39,4 @@ namespace CSProject
                  + "\nTotal Pay: " + TotalPay;
         }
     }
+}

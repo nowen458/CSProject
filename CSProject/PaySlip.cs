@@ -58,16 +58,16 @@ namespace CSProject
                 sw.WriteLine("");
 
                 // basic pay and allowance
-                sw.WriteLine("Basic Pay: {0C}", f.BasicPay);
+                sw.WriteLine("Basic Pay: {0:C}", f.BasicPay);
                 // if type of Staff object is Manager
                 if (f.GetType() == typeof(Manager))
                 {
-                    sw.WriteLine("Allowance Pay: {0C}", ((Manager)f).Allowance);
+                    sw.WriteLine("Allowance Pay: {0:C}", ((Manager)f).Allowance);
                 }
                 // if type of Staff object is Admin
                 else if (f.GetType() == typeof(Admin))
                 {
-                    sw.WriteLine("Overtime Pay: {0C", ((Admin)f).Overtime);
+                    sw.WriteLine("Overtime Pay: {0:C}", ((Admin)f).Overtime);
                 }
 
                 // blank line
@@ -75,7 +75,7 @@ namespace CSProject
                 sw.WriteLine("====================");
 
                 // total pay
-                sw.WriteLine("Total Pay: {0C}", f.TotalPay);
+                sw.WriteLine("Total Pay: {0:C}", f.TotalPay);
                 sw.WriteLine("====================");
 
 

@@ -11,7 +11,7 @@ namespace CSProject
             // create variables
             List<Staff> myStaff = new List<Staff>();
             string[] result = new string[2];
-            string path = "staff.txt";
+            string path = "C:/Users/nowen/Documents/GitHub/CSProject/CSProject/staff.txt";
             string[] separator = { ", " };
 
             // if file exists
@@ -23,7 +23,7 @@ namespace CSProject
                     while (sr.EndOfStream !=true)
                     {
                         // splits on commas
-                        result = path.Split(separator, StringSplitOptions.None);
+                        result = sr.ReadLine().Split(separator, StringSplitOptions.None);
 
                         // if employee is manager
                         if (result[1] == "Manager")

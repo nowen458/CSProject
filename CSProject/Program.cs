@@ -15,7 +15,7 @@ namespace CSProject
             // gets year from user
             while (year == 0)
             {
-                Console.WriteLine("\nPlease enter year: ");
+                Console.WriteLine("Please enter year: ");
 
                 try
                 {
@@ -32,14 +32,14 @@ namespace CSProject
             // gets month from user
             while (month == 0)
             {
-                Console.WriteLine("\nPlease enter month: ");
+                Console.WriteLine("Please enter month: ");
 
                 try
                 {
                     month = Convert.ToInt32(Console.ReadLine());
                     if ((month > 0) && (month < 13))
                     {
-                        return;
+                        continue;
                     }
                     else
                     {
@@ -52,6 +52,38 @@ namespace CSProject
                     Console.WriteLine("Unfortunately, there was an error converting the month to an interger: " + e.Message);
                 } // end catch
             } // end month while
+
+            // reads file and assigns to myStaff
+            myStaff = fr.ReadFile();
+
+            // iterate over objects in staff
+            for (int i = 0; i < myStaff.Count; i++)
+            {
+                try
+                {
+                    Console.WriteLine("\nEnter hours worked for " + myStaff[i].NameOfStaff + ":"); // user enters hours worked
+                    myStaff[i].HoursWorked = Convert.ToInt32(Console.ReadLine()); // read hours worked entered by user
+
+                    // calculate pay
+                    myStaff[i].CalculatePay();
+
+                    // display staff info
+                    Console.WriteLine(myStaff[i].ToString());
+                }
+                catch (Exception e)
+                {
+                    i--;
+                    Console.WriteLine("There has been a problem calculating the hours worked. Error message: " + e + " Recalculating...");
+                }
+            }
+
+            PaySlip ps = new PaySlip(month, year);
+
+            ps.GeneratePaySlip(myStaff);
+            ps.GenerateSummary(myStaff);
+
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
